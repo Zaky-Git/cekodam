@@ -2,10 +2,24 @@ import React, { useState } from "react";
 import "./App.css";
 
 const khodams = [
+  { name: "Raja Jomok", img: "/images/rajajomok.jpg" },
   { name: "Ijad Fotografer", img: "/images/langsungskrinsotiijad.png" },
   { name: "Hunaini Antapani", img: "/images/hunainew.png" },
-  { name: "Japran Kuyang", img: "/images/kepala japran.png" },
+  { name: "Japran Squad", img: "/images/kepala japran.png" },
   { name: "Hasnan Sukuna", img: "/images/hasnansukuna.jpg" },
+  { name: "Maling Smarthos", img: "/images/maling smarthos.jpg" },
+  { name: "Raja Jomok", img: "/images/rajajomok.jpg" },
+  { name: "Ijad Jadul", img: "/images/ijadul.jpg" },
+  { name: "Steven Sussy", img: "/images/sussy.png" },
+  { name: "Raja Jomok", img: "/images/rajajomok.jpg" },
+  { name: "Hasnan 19 Detik", img: "/images/hasnan19detik.png" },
+  { name: "Raja Jomok", img: "/images/rajajomok.jpg" },
+  { name: "Mas Rusdi", img: "/images/diamaja.jpg" },
+  { name: "Raja Jomok", img: "/images/rajajomok.jpg" },
+  { name: "Aril Valorant", img: "/images/prxariela.jpg" },
+  { name: "Anomali", img: "/images/stv.png" },
+  { name: "Duo Maut", img: "/images/party.jpg" },
+  { name: "Mbah Apek", img: "/images/mbah.jpg" },
 ];
 
 function App() {
@@ -19,6 +33,7 @@ function App() {
     if (name === "") {
       return;
     }
+    setKhodam("");
     setLoading(true);
     setResultName(name);
     setTimeout(() => {
@@ -29,7 +44,7 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-900 text-white p-4">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-900  text-white p-4">
       <h1 className="text-5xl font-bold mb-6 text-red-600">Cek Khodam Anda</h1>
       <form onSubmit={handleSubmit} className="mb-8">
         <input
@@ -71,6 +86,18 @@ function App() {
             />
           </div>
         )
+      )}
+      {khodam && khodam.name === "Hasnan 19 Detik" && (
+        <div className="mt-4">Infokan Link</div>
+      )}
+      {khodam && khodam.name === "Raja Jomok" && (
+        <a
+          href="https://www.instagram.com/nzakipermana/"
+          className="mt-4 text-blue-400"
+        >
+          {" "}
+          Hubungi Khodam anda
+        </a>
       )}
     </div>
   );
